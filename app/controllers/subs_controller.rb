@@ -1,5 +1,7 @@
 class SubsController < ApplicationController
   def index
-    render component: "Subs"
+    @subs = Sub.all
+
+    render component: "Subs", props: {subs: @subs}
   end
 end
