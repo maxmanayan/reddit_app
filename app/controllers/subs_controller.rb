@@ -4,4 +4,8 @@ class SubsController < ApplicationController
 
     render component: "Subs", props: {subs: @subs}
   end
+
+  def show
+    render component: "Sub"
+  end
 end
