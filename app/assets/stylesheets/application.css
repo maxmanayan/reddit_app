@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+
+ * {
+  font-family: 'Ubuntu', sans-serif;
+ }
+
+ .viewport {
+  background: whitesmoke;
+
+  min-height: 100vh;
+  min-width: 1024px;
+ }
+ 
+ .subs-container {
+  background: whitesmoke;
+ }
+
+ .sub-container {
+   background: aliceblue;
+
+   border-style: rounded;
+
+   margin: 2em;
+   padding: 2em;
+ }

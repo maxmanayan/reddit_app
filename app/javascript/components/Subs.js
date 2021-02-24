@@ -6,16 +6,19 @@ const Subs = (props) => {
   const renderSubs = () => {
     return subs.map(sub => {
       return(
-        <div>
-          <h1>{sub.name}</h1>
+        <div className="sub-container">
+          <h2>{sub.name}</h2>
         </div>
       )
     })
   }
   return (
-    <div>
+    <div className="viewport">
       <h1>Subs Page</h1>
-      {renderSubs()}
+      <div className="subs-container">
+        {renderSubs()} 
+      </div>
+      
     </div>
     
   )
