@@ -14,6 +14,7 @@ const Sub = (props) => {
           {/* <p>{topic.sub_id}</p> */}
           <a href={`/subs/${topic.sub_id}/topics/${topic.id}`}>Show Topic</a>
           <a href={`/subs/${topic.sub_id}/topics/${topic.id}/edit`}>Edit</a>
+          <a href={`/subs/${topic.sub_id}/topics/${topic.id}`} data-method="delete">Delete</a>
         </div>
       )
     })

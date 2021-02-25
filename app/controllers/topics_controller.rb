@@ -47,6 +47,13 @@ class TopicsController < ApplicationController
   end
 
 
+  def destroy
+    @topic = @sub.topics.find(params[:id])
+
+    @topic.destroy
+    redirect_to sub_path(@sub)
+  end
+
   private
 
   def get_sub
