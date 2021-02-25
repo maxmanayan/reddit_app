@@ -19,8 +19,8 @@ const Sub = (props) => {
   }
   return(
     <div className="viewport">
-      <a href={/subs/}>Back to Subs</a>
       <h1>{sub.name}</h1>
+      <a href={/subs/}>Back to Subs</a>
       <div className="subs-container">
         {renderTopics()}
       </div>
