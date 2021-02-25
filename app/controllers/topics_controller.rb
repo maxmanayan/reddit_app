@@ -31,6 +31,22 @@ class TopicsController < ApplicationController
   end
 
 
+  #returning edit form
+  def edit
+    @topic = @sub.topics.find(params[:id])
+
+    render component: "TopicEdit", props: {sub: @sub, topic:@topic}
+  end
+
+
+  def update
+    @topic = @sub.topics.find(params[:id])
+    @topic.update(topic_params)
+
+    redirect_to sub_topic_path(@sub, @topic)
+  end
+
+
   private
 
   def get_sub

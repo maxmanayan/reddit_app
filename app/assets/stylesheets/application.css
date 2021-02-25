@@ -41,3 +41,10 @@
    padding: 2em;
    border: 1px solid black;
  }
+
+
+ a {
+   margin-left: 3em;
+   color: blue;
+   text-decoration: none;
+ }

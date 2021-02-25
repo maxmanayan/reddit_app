@@ -9,10 +9,11 @@ const Sub = (props) => {
     return topics.map(topic => {
       return(
         <div className="sub-container">
-          <h3>{topic.name}</h3>
+          <h2>{topic.name}</h2>
           <p>{topic.body}</p>
-          <p>{topic.sub_id}</p>
+          {/* <p>{topic.sub_id}</p> */}
           <a href={`/subs/${topic.sub_id}/topics/${topic.id}`}>Show Topic</a>
+          <a href={`/subs/${topic.sub_id}/topics/${topic.id}/edit`}>Edit</a>
         </div>
       )
     })
