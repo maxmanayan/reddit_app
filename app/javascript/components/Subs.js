@@ -8,6 +8,7 @@ const Subs = (props) => {
       return(
         <div className="sub-container">
           <h2>{sub.name}</h2>
+          <a href={`/subs/${sub.id}`}>Show</a>
         </div>
       )
     })
@@ -18,7 +19,6 @@ const Subs = (props) => {
       <div className="subs-container">
         {renderSubs()} 
       </div>
-      
     </div>
     
   )

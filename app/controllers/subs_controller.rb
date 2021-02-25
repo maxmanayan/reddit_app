@@ -6,6 +6,8 @@ class SubsController < ApplicationController
   end
 
   def show
-    render component: "Sub"
+    @sub = Sub.find(params[:id])
+    @topics = @sub.topics
+    render component: "Sub", props: {sub: @sub, topics: @topics}
   end
 end
