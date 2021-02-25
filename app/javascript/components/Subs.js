@@ -9,6 +9,8 @@ const Subs = (props) => {
         <div className="sub-container">
           <h2>{sub.name}</h2>
           <a href={`/subs/${sub.id}`}>Show</a>
+          <a href={`/subs/${sub.id}/edit`}>Edit</a>
+          <a href={`/subs/${sub.id}`} data-method="delete">Delete</a>
         </div>
       )
     })
@@ -16,6 +18,7 @@ const Subs = (props) => {
   return (
     <div className="viewport">
       <h1>Subs Page</h1>
+      <a href={`/subs/new`}>Create New Sub</a>
       <div className="subs-container">
         {renderSubs()} 
       </div>
