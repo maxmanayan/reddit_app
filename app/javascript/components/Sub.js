@@ -21,6 +21,7 @@ const Sub = (props) => {
     <div className="viewport">
       <h1>{sub.name}</h1>
       <a href={/subs/}>Back to Subs</a>
+      <a href={`/subs/${sub.id}/topics/new`}>Create New Topic</a>
       <div className="subs-container">
         {renderTopics()}
       </div>
