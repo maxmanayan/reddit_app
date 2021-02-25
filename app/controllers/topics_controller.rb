@@ -20,6 +20,13 @@ class TopicsController < ApplicationController
 
 
   def create
+    #creates in memory, not database
+    @topic = @sub.topics.new(topic_params)
+    if (@topic.save)
+      redirect_to sub_path(@sub)
+    else
+      render component: "TopicNew", props: {sub: @sub}
+    end
 
   end
 
@@ -28,5 +35,9 @@ class TopicsController < ApplicationController
 
   def get_sub
     @sub = Sub.find(params[:sub_id])
+  end
+
+  def topic_params
+    params.require(:topic).permit(:name, :body)
   end
 end

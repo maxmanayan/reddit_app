@@ -6,7 +6,7 @@ const TopicNew = (props) => {
   return(
     <div style={styles.container}>
       <h1>New Topic Form</h1>
-      <form action={`/subs/sub.id/topics`} method="post">
+      <form action={`/subs/${sub.id}/topics`} method="post">
         <p>name</p>
         <input name="topic[name]"/>
         <p>body</p>
